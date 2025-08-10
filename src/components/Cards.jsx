@@ -122,7 +122,7 @@ export default function Cards({ score, highScore, setScore, setHighScore }) {
       {gameOver ? (
         <GameOver />
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-10 mx-auto justify-items-center w-fit">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 mx-auto justify-items-center w-fit">
           {cards.map((card) => (
             <button
               type="button"
@@ -132,7 +132,8 @@ export default function Cards({ score, highScore, setScore, setHighScore }) {
                 bg-gray-200 border-2 border-blue-200 rounded-xl shadow-2xl flex flex-col items-center p-4
                 w-[160px] h-[200px]
                 sm:w-[220px] sm:h-[280px]
-                md:w-[270px] md:h-[340px]
+                md:w-[243px] md:h-[306px]
+                lg:w-[270px] lg:h-[340px]
                 transition-transform hover:scale-105 hover:shadow-orange-300 hover:bg-gray-100
                 "
             >
@@ -142,7 +143,8 @@ export default function Cards({ score, highScore, setScore, setHighScore }) {
                 className="
                 w-[160px] h-[200px]
                 sm:w-[220px] sm:h-[280px]
-                md:w-[270px] md:h-[340px]
+                md:w-[243px] md:h-[306px]
+                lg:w-[270px] lg:h-[340px]
                 object-contain
                 "
               />
