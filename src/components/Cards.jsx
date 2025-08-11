@@ -131,7 +131,7 @@ export default function Cards({
       {gameOver ? (
         <GameOver />
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 mx-auto justify-items-center w-fit">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-0 sm:gap-8 mx-auto justify-items-center w-fit">
           {cards.map((card) => (
             <button
               type="button"
@@ -139,7 +139,7 @@ export default function Cards({
               onClick={() => handleCardClick(card.id)}
               className="
                 bg-gray-200 border-2 border-blue-200 rounded-xl shadow-2xl flex flex-col items-center p-4
-                w-[160px] h-[200px]
+                w-[144px] h-[180px]
                 sm:w-[220px] sm:h-[280px]
                 md:w-[243px] md:h-[306px]
                 lg:w-[270px] lg:h-[340px]
@@ -150,7 +150,7 @@ export default function Cards({
                 src={card.sprites.other["official-artwork"].front_default}
                 alt={card.name}
                 className="
-                w-[160px] h-[200px]
+                w-[144px] h-[180px]
                 sm:w-[220px] sm:h-[280px]
                 md:w-[243px] md:h-[306px]
                 lg:w-[270px] lg:h-[340px]
@@ -158,7 +158,7 @@ export default function Cards({
                 "
               />
               <div
-                className="capitalize mt-2 text-lg sm:text-xl"
+                className="capitalize mt-2 text-md sm:text-xl"
                 style={{ fontFamily: '"Delius Swash Caps", cursive' }}
               >
                 {card.name}
