@@ -6,7 +6,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base:
-    process.env.NODE_ENV === "production"
+    process.env.NODE_ENV === "production" &&
+    process.env.DEPLOY_TARGET === "gh-pages"
       ? "/memory-card/" // for GitHub Pages
       : "/", // for Netlify & local dev
 });
