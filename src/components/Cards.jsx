@@ -145,7 +145,7 @@ export default function Cards({
               onClick={() => handleCardClick(card.id)}
               className="
                 bg-gray-200 border-2 border-blue-200 rounded-xl shadow-2xl flex flex-col items-center p-4
-                w-[160px] h-[185px]
+                w-[160px] h-[190px]
                 sm:w-[220px] sm:h-[280px]
                 md:w-[243px] md:h-[306px]
                 lg:w-[270px] lg:h-[340px]
