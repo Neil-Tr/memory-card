@@ -1,6 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import Loading from "./Loading";
-export default function Cards({ score, highScore, setScore, setHighScore }) {
+export default function Cards({
+  score,
+  highScore,
+  setScore,
+  setHighScore,
+  level,
+  setLevel,
+}) {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState(null);
 
@@ -106,6 +113,8 @@ export default function Cards({ score, highScore, setScore, setHighScore }) {
     if (nextClicked.length === 6) {
       setHighScore((prev) => (nextScore > prev ? nextScore : prev));
       await startNewRound();
+      const nextLevel = level + 1;
+      setLevel(nextLevel);
       return;
     }
     setCards((prev) => shuffleCards(prev));
@@ -149,7 +158,7 @@ export default function Cards({ score, highScore, setScore, setHighScore }) {
                 "
               />
               <div
-                className="capitalize mt-2 text-xl"
+                className="capitalize mt-2 text-lg sm:text-xl"
                 style={{ fontFamily: '"Delius Swash Caps", cursive' }}
               >
                 {card.name}
